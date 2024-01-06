@@ -1,0 +1,109 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background: linear-gradient(
+        190deg,
+        rgb(37, 19, 138) 2%,
+        rgb(59, 21, 117) 100%
+    );
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.card-login{
+    background-image: url(../Resources/Images/bg.jpg);
+    border-radius: 3%;  
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 50px;
+    width:420;
+    text-align: center;
+    box-shadow: 0 0 200px rgb(3, 196, 221);
+    border: 2px solid #00e1ff;
+}
+
+.titleH1{
+    color: #FCFEF7;
+    margin-bottom: 40px;
+    font-family:monospace;
+}
+
+.logoImg{
+    width: 150px;
+    margin-bottom: 25px;
+}
+
+.input-container{
+    position: relative;
+}
+
+.rscIcon{
+    position: absolute;
+    right: 20px;
+    top: 38%;
+    transform: translateY(-50%);
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #6D2FE3;
+    color: #FCFEF7;
+    padding: 6px;
+}
+
+.input-container>input{
+    padding: 20px 50px 20px 15px;
+    width: 100%;
+    margin-bottom: 25px;
+    border-radius: 35px;
+    background-color: hsla(271, 88%, 6%, 0.699);
+    border: 2px solid #C48AFB;
+    font-size: 16px;
+    outline: none;
+    color: #FCFEF7;
+}
+
+::placeholder{
+    color:#979197;
+    font-size: 16px;
+}
+
+a {
+    display: block;
+    color: #FCFEF7;
+    font-size: 15px;
+    text-decoration: none;
+    margin-bottom: 25px;
+}
+
+.btn{
+    margin-top: 60px;
+    background-color: #7D36FF;
+    padding: 14px 45px;
+    border: 0;
+    box-shadow: 0 0 20px rgba(0,0,0,1);
+    border-radius: 25px;
+    color:#FCFEF7;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+
+@media(max-width:991px){
+
+    body{
+        padding: 30px;
+    }
+
+    form{
+        width: 100%;
+    }
+
+}

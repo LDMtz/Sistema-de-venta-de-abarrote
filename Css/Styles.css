@@ -1,0 +1,61 @@
+.img-nav{
+    width: 18%;
+    height: auto;
+}
+
+.svg-icon{
+    width: 23px;
+    height: auto;
+}
+
+.info-color{
+    color: orange;
+}
+
+.example-color{
+    color: blue;
+}
+
+div.col-md-2 h6.center {
+    text-align: center;
+}
+
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background: radial-gradient(
+        rgb(0, 247, 255) 2%,
+        rgb(20, 126, 219) 100%
+    );
+}
+
+footer {
+    margin-top: auto;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+
+.txtAreaCaja{
+    resize: none;
+
+}
+
+.card-as-button {
+    cursor: pointer;
+    border: 1px solid #007bff; /* Color del borde, puedes personalizarlo */
+    border-radius: 0.25rem; /* Esquinas redondeadas, ajusta según sea necesario */
+}
+
+.card-as-button.selected,
+.card-as-button:hover {
+    border: 1px solid #0056b3; /* Cambia el color del borde al pasar el ratón sobre la tarjeta */
+    box-shadow: 0 0 20px rgb(89, 255, 0); /* Agrega una sombra al pasar el ratón sobre la tarjeta */
+}
+
+.custom-modal-clientes {
+    width: 800px;
+  }

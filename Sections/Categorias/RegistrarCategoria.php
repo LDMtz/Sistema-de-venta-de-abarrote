@@ -1,0 +1,62 @@
+<?php include("../../Templates/Header.php"); ?>
+<?php
+    include("../../Conexion.php");
+
+    // Registramos al empleado en la bd
+    if ($_POST) {
+        // Las claves son iguales, proceder con el registro
+        $Nombre = isset($_POST["Nombre"]) ? $_POST["Nombre"] : "";
+
+        // Query para insertar en la base de datos
+        $query = "INSERT INTO Categorias (Nombre) VALUES ('$Nombre')";
+        
+        mysqli_query($conexion, $query);
+
+        echo '<script type="text/javascript">
+                swal("¡Categoria registrada!", "Haz registrado con exito esta categoria", "success");
+                setTimeout(function(){
+                    window.location.href = "index.php";
+                }, 1500);
+            </script>';
+    }
+    mysqli_close($conexion);
+?>
+
+<link rel="stylesheet" href="../../Libs/bootstrap.min.css"/>
+
+
+<br>
+<h1>REGISTRAR CATEGORIA</h1>
+<br>
+
+<div class="container d-flex justify-content-center align-items-center">
+
+    <div class="card col-6">
+        <div class="card-header">
+            Datos de la Categoría
+        </div>
+        <div class="card-body">
+            <form action="" method="POST" enctype="multipart/form-data">
+
+                <div class="mb-3">
+                <label for="Nombre" class="form-label fw-bold">Nombre:</label>
+                <input type="text"
+                    class="form-control" name="Nombre" id="Nombre" aria-describedby="helpId" placeholder="Nombre de la categoría" required>
+                </div>
+                
+                <div class="d-flex justify-content-center mb-1">
+                    <button type="submit" class="btn btn-success me-5">Registrar</button>
+                    <a name="" id="" class="btn btn-danger" href="index.php" role="button">Cancelar</a>
+                </div>
+            </form>
+        </div>
+
+        <div class="card-footer text-muted"></div>
+
+    </div>
+    
+</div>
+
+<br>
+
+<?php include("../../Templates/Footer.php"); ?>
